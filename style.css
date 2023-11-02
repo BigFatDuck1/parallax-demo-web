@@ -1,0 +1,46 @@
+
+body {
+    /* If the margin is not removed, there will be a scrollbar on the .container div */
+    /* margin: 0; */
+    background-color: transparent;
+}
+
+.container {
+    height: 100vh;
+
+    overflow-x: hidden;
+    /* Difference between scroll and auto is in auto, the scrollbar doesn't always show */
+    overflow-y: auto;
+
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/perspective */
+    /* Perspective determines distance between z-index = 0 and user */
+    perspective: 5px;
+    /* perspective: 1px; */
+}
+
+.layer {
+    height: 150vh;
+}
+
+.layer {
+    /* Applied to all parallax layers */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* translateZ determine position in z-axis i.e. distance from user to screen and beyond the screen  */
+/* the lower the z value, the further away the element is e.g. -2 is deeper than 0 */
+.background {
+    transform: translateZ(0);
+}
+
+.middle {
+    transform: translateZ(-1px);
+}
+
+.foreground {
+    transform: translateZ(-2px);
+}
