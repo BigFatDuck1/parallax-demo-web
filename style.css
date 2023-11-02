@@ -1,8 +1,11 @@
 
 body {
-    /* If the margin is not removed, there will be a scrollbar on the .container div */
-    /* margin: 0; */
+    margin: 0;
     background-color: transparent;
+}
+
+div {
+    text-align: center;
 }
 
 .container {
@@ -16,10 +19,12 @@ body {
     /* Perspective determines distance between z-index = 0 and user */
     perspective: 5px;
     /* perspective: 1px; */
-}
 
-.layer {
-    height: 150vh;
+    top: 10rem;
+
+    height: 70rem;
+
+    background-color: antiquewhite;
 }
 
 .layer {
@@ -29,18 +34,31 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+
+    width: 100%;
 }
 
 /* translateZ determine position in z-axis i.e. distance from user to screen and beyond the screen  */
 /* the lower the z value, the further away the element is e.g. -2 is deeper than 0 */
 .background {
     transform: translateZ(0);
+    height: 100rem;
+
+    background-color: lightyellow;
 }
 
 .middle {
     transform: translateZ(-1px);
+    top: 10rem;
+    height: 50rem;
+
+    background-color: aquamarine;
 }
 
 .foreground {
     transform: translateZ(-2px);
+    top: 20rem;
+    height: 50rem;
+
+    background-color: lightblue;
 }
