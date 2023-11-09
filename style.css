@@ -28,6 +28,9 @@ body::-webkit-scrollbar-thumb {
     display: grid;
     /* There is only one square in the middle */
     grid-template-areas: "stack"; 
+    /* Animation */
+    animation: parallax linear 500ms;
+    animation-timeline: scroll();
 }
 
 .parallax > * {
@@ -49,4 +52,14 @@ img {
 
 .yellow_clouds {
     z-index: 2;
+}
+
+/* Animation */
+@keyframes parallax {
+    from {
+        /* none */
+    }
+    to {
+        transform: translateY(500px);
+    }
 }
