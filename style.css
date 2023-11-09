@@ -28,13 +28,13 @@ body::-webkit-scrollbar-thumb {
     display: grid;
     /* There is only one square in the middle */
     grid-template-areas: "stack"; 
-    /* Animation */
-    animation: parallax linear 500ms;
-    animation-timeline: scroll();
 }
 
 .parallax > * {
     grid-area: stack;
+    /* Animation */
+    animation: parallax linear 500ms;
+    animation-timeline: scroll();
 }
 
 img {
@@ -57,9 +57,19 @@ img {
 /* Animation */
 @keyframes parallax {
     from {
-        /* none */
+        transform: translateY(0px);
     }
     to {
-        transform: translateY(500px);
+        transform: translateY(calc(var(--speed) * 500px));
     }
+}
+
+
+/* Set speed */
+.white_clouds {
+    --speed: 5;
+}
+
+.yellow_clouds {
+    --speed: 2;
 }
