@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
 }
 
 /* Scrollbar styling */
@@ -35,6 +36,7 @@ body::-webkit-scrollbar-thumb {
     /* Animation */
     animation: parallax linear 500ms;
     animation-timeline: scroll();
+    animation-fill-mode: both;
 }
 
 img {
@@ -67,9 +69,9 @@ img {
 
 /* Set speed */
 .white_clouds {
-    --speed: 5;
+    --speed: -0.5;
 }
 
 .yellow_clouds {
-    --speed: 2;
+    --speed: -10;
 }
