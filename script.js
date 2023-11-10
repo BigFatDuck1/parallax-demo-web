@@ -1,20 +1,8 @@
 
-let keyframes = [
-    {transform: "translateY(0px)"},
-    {transform: "translateY(500px)"},
-]
+window.addEventListener("scroll", function setAnimation(event) {
+    const white_clouds = document.querySelector(".white_clouds");
+    const speed = white_clouds.dataset.speed;
+    white_clouds.style.transform = "translateY(" + window.scrollY * speed + "px)";
 
-let timing = {
-    duration: 500,
-    fill: "both",
-}
-
-const setAnimation = () => {
-    document.querySelector(".white_clouds").animate(
-        keyframes, timing
-        )
-        console.log("set")
-    }
-
-
-document.addEventListener("scroll", setAnimation);
+    
+});
